@@ -1,8 +1,8 @@
-# 📈 Reinforcement Learning for Stock Price Prediction and Portfolio Optimization
+# Reinforcement Learning for Stock Price Prediction and Portfolio Optimization
 
 A cutting-edge system that integrates sentiment analysis from financial news and reports with reinforcement learning to predict stock movements and optimize portfolio value through intelligent buy/sell/hold strategies.
 
-## 🧠 Key Features
+## Key Features
 - **Sentiment-Aware Trading**: Combines sentiment from news articles and company reports using FinBERT.
 - **Custom Daily Sentiment Score**: Aggregates sentiment from multiple sources to represent market perception.
 - **Multi-Modal Feature Set**: Integrates numerical indicators (e.g., revenue, EPS) with sentiment signals.
@@ -12,7 +12,7 @@ A cutting-edge system that integrates sentiment analysis from financial news and
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 ```
 +---------------------+       +----------------------+        +----------------+
 |  Financial News     |       |  Earnings Reports     |        |  Stock Prices   |
@@ -45,14 +45,14 @@ A cutting-edge system that integrates sentiment analysis from financial news and
 
 ---
 
-## 🧾 Data Sources
-- 📊 **Stock Prices**: Yahoo Finance (via yfinance)
-- 📰 **Financial News**: News APIs (e.g., NewsAPI, Alpha Vantage)
-- 📄 **Earnings Reports**: Company filings (PDFs from EDGAR / investor sites)
+## Data Sources
+- **Stock Prices**: Yahoo Finance (via yfinance)
+- **Financial News**: News APIs (e.g., NewsAPI, Alpha Vantage)
+- **Earnings Reports**: Company filings (PDFs from EDGAR / investor sites)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **FinBERT** (HuggingFace Transformers)
 - **OpenAI Gym / Stable Baselines3**
 - **yfinance**, **Pandas**, **NumPy**, **Matplotlib**
