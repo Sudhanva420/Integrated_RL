@@ -5,7 +5,7 @@ A cutting-edge system that integrates sentiment analysis from financial news and
 ## Key Features
 - **Sentiment-Aware Trading**: Combines sentiment from news articles and company reports using FinBERT.
 - **Custom Daily Sentiment Score**: Aggregates sentiment from multiple sources to represent market perception.
-- **Multi-Modal Feature Set**: Integrates numerical indicators (e.g., revenue, EPS) with sentiment signals.
+- **Multi-Modal Feature Set**: Integrates numerical indicators with sentiment signals.
 - **RL-Based Strategy**: Employs a Deep Q-Network (DQN) or PPO agent to learn optimal actions in a dynamic market.
 - **Backtesting Module**: Evaluates performance on historical data with custom reward functions.
 - **Buy/Sell/Hold Decision System**: Action space designed for practical portfolio management.
