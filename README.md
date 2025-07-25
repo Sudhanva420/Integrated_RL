@@ -47,8 +47,8 @@ A cutting-edge system that integrates sentiment analysis from financial news and
 
 ## Data Sources
 - **Stock Prices**: Yahoo Finance (via yfinance)
-- **Financial News**: News APIs (e.g., NewsAPI, Alpha Vantage)
-- **Earnings Reports**: Company filings (PDFs from EDGAR / investor sites)
+- **Financial News**: News APIs
+- **Earnings Reports**: Company filings
 
 ---
 
@@ -56,6 +56,7 @@ A cutting-edge system that integrates sentiment analysis from financial news and
 - **FinBERT** (HuggingFace Transformers)
 - **OpenAI Gym / Stable Baselines3**
 - **yfinance**, **Pandas**, **NumPy**, **Matplotlib**
-- **scikit-learn**, **PyMuPDF (fitz)** for PDF parsing
+- **scikit-learn**
+- **UnstructuredPDFLoader**
 
 
