@@ -1,0 +1,1 @@
+This folder contains codes for extracting the sentiment score out of quarterly reports by feeding them to our fine tuned FinBERT model and subsequently combining it with the OHLCV data from yfinance. 
