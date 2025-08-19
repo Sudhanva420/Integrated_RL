@@ -1,4 +1,3 @@
-# aggregation.py
 import numpy as np
 from collections import defaultdict
 
@@ -10,4 +9,5 @@ def aggregate_quarterly_sentiments(results):
         if q and s is not None:
             buckets[q].append(s)
     return {q: float(np.mean(scores)) for q, scores in buckets.items()}
+
 
