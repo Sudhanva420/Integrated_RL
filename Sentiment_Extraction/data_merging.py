@@ -1,4 +1,3 @@
-# data_merging.py
 import pandas as pd
 
 def merge_report_sentiment(daily_df, quarterly_map):
@@ -10,3 +9,4 @@ def merge_report_sentiment(daily_df, quarterly_map):
 
 def save_dataframe_to_csv(df, path):
     df.to_csv(path, index=False)
+
