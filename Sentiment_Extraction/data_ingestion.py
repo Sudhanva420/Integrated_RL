@@ -1,4 +1,3 @@
-# data_ingestion.py
 import re
 import requests
 import pandas as pd
@@ -24,4 +23,5 @@ def load_quarterly_report(pdf_path):
         "type": "quarterly_report",
         "quarter": quarter
     }
+
 
