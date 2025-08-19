@@ -1,4 +1,3 @@
-# preprocessing_sentiment.py
 import re
 from transformers import pipeline, AutoTokenizer
 from collections import Counter
@@ -10,6 +9,7 @@ model_id = "/content/drive/MyDrive/RL_Project/finbert_kdave_trained/finbert_kdav
 finbert = pipeline("sentiment-analysis", model=model_id)
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
+#function for splitting text into chunks due to how big it is
 def split_text_into_chunks(text, max_tokens=512):
     tokens = tokenizer.tokenize(text)
     chunk_size = max_tokens - 2
@@ -19,6 +19,7 @@ def split_text_into_chunks(text, max_tokens=512):
         chunks.append(tokenizer.convert_tokens_to_string(chunk_tokens))
     return chunks
 
+#this function runs the code block to get the sentiment and we get the required labels
 def get_sentiment(text):
     text = clean_text(text)
     tokens = tokenizer.tokenize(text)
@@ -42,3 +43,4 @@ def sentiment_chain(doc):
         "sentiment_label": label,
         "sentiment_score": score
     }
+
