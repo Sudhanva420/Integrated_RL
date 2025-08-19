@@ -9,10 +9,8 @@ def extract_quarter_from_filename(filename):
     match = re.search(r'(\d{4}Q[1-4])', filename)
     return match.group(1) if match else None
 
+#loads a pdf quarterly report and its is tagged with its quarter
 def load_quarterly_report(pdf_path):
-    """
-    Loads a PDF quarterly report, concatenates its text, and tags it with its quarter.
-    """
     loader = UnstructuredPDFLoader(pdf_path)
     docs = loader.load()
     text = "\n".join(d.page_content for d in docs)
@@ -23,5 +21,6 @@ def load_quarterly_report(pdf_path):
         "type": "quarterly_report",
         "quarter": quarter
     }
+
 
 
