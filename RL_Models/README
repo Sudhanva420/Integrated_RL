@@ -1,1 +1,2 @@
-This folder contains the various RL agents that were trained to optimize the performance of Indian stocks and yield better returns.
+The 2 datasets(dataset with HDFC quarterly report sentiment along with OHLCV data and the dataset with the sentiment scores of all the daily news articles used) are combined and given to the RL model to provide a richer environment.
+folder contains the various RL agents that were trained to optimize the performance of Indian stocks and yield better returns.
