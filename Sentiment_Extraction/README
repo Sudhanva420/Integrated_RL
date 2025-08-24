@@ -1,1 +1,2 @@
-This folder contains codes for extracting the sentiment score out of quarterly reports by feeding them to our fine tuned FinBERT model and subsequently combining it with the OHLCV data from yfinance. 
+This folder contains codes for extracting the sentiment score out of quarterly reports by feeding them to our fine tuned FinBERT model and subsequently combining it with the OHLCV data from yfinance in order to create a dataset.
+This dataset will further be merged with sentimnet derived from news articles to get the final dataset that will be fed to the RL agent.
