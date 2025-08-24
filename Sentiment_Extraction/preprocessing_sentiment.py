@@ -9,7 +9,6 @@ model_id = "/content/drive/MyDrive/RL_Project/finbert_kdave_trained/finbert_kdav
 finbert = pipeline("sentiment-analysis", model=model_id)
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 
-#function for splitting text into chunks due to how big it is
 def split_text_into_chunks(text, max_tokens=512):
     tokens = tokenizer.tokenize(text)
     chunk_size = max_tokens - 2
@@ -18,8 +17,7 @@ def split_text_into_chunks(text, max_tokens=512):
         chunk_tokens = tokens[i:i+chunk_size]
         chunks.append(tokenizer.convert_tokens_to_string(chunk_tokens))
     return chunks
-
-#this function runs the code block to get the sentiment and we get the required labels
+#Retrieves the sentiment label and score for each chunk using our fine-tuned FinBERT
 def get_sentiment(text):
     text = clean_text(text)
     tokens = tokenizer.tokenize(text)
@@ -35,7 +33,7 @@ def get_sentiment(text):
     if not scores: return None, None
     label = Counter(labels).most_common(1)[0][0]
     return label, sum(scores) / len(scores)
-
+#Assigning sentiment for each document
 def sentiment_chain(doc):
     label, score = get_sentiment(doc["text"])
     return {
@@ -43,4 +41,5 @@ def sentiment_chain(doc):
         "sentiment_label": label,
         "sentiment_score": score
     }
+
 
