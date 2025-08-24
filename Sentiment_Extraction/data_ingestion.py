@@ -3,13 +3,13 @@ import requests
 import pandas as pd
 from langchain.document_loaders import UnstructuredPDFLoader
 
-#This function extracts a quarter string like "2023Q1") from a filename and expects filenames of format "INFY_2023Q2_report1.pdf".
+#This function extracts a quarter string like "2023Q1" from the filenames that were explicitly named in this fashion 
 def extract_quarter_from_filename(filename):
 
     match = re.search(r'(\d{4}Q[1-4])', filename)
     return match.group(1) if match else None
 
-#loads a pdf quarterly report and its is tagged with its quarter
+#loads a report and is tagged with its quarter
 def load_quarterly_report(pdf_path):
     loader = UnstructuredPDFLoader(pdf_path)
     docs = loader.load()
@@ -21,6 +21,7 @@ def load_quarterly_report(pdf_path):
         "type": "quarterly_report",
         "quarter": quarter
     }
+
 
 
 
