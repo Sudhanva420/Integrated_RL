@@ -1,0 +1,2 @@
+This repo contains the code file that was used to combine sentiment scores derived from news articles (using our fine-tuned FinBERT) with the datset containing the OHLCV and quarterly sentiment(derived from quarterly reports) in order to create a comprehensive and dynamic dataset that gives a true representation of fluctuating investor and market participant sentiment on a day to day basis.
+This combined dataset is the basis for the decisions that the RL agents take for improving a stock's performance.
