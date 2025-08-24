@@ -1,6 +1,6 @@
 import numpy as np
 from collections import defaultdict
-
+#groups all the quarterly reports by quarter and and returns a mean score per quarter
 def aggregate_quarterly_sentiments(results):
     
     buckets = defaultdict(list)
@@ -9,5 +9,6 @@ def aggregate_quarterly_sentiments(results):
         if q and s is not None:
             buckets[q].append(s)
     return {q: float(np.mean(scores)) for q, scores in buckets.items()}
+
 
 
