@@ -1,2 +1,2 @@
 This repo contains the code file that was used to derive sentiment from financial news articles focused on a particlular company (using our fine-tuned FinBERT) to create a comprehensive and dynamic dataset that gives a true representation of fluctuating investor and market participant sentiment on a day to day basis.
-This dataset comined with the datset comprising of OHLCV data and sentiment per quarter (derived from quarterly reports) is the basis for the decisions that the RL agents take for improving a stock's performance.
+This dataset comined with the dataset comprising of OHLCV data and sentiment per quarter (derived from quarterly reports) is the basis for the decisions that the RL agents take for improving a stock's performance.
